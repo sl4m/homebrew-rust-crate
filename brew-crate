@@ -1,0 +1,19 @@
+#!/bin/bash
+set -euo pipefail
+
+if [[ $# -lt 1 ]]; then
+    echo "Usage: brew crate foo"
+    exit 1
+fi
+
+NAME="${1%@*}"; NAME="${NAME%/...}"; NAME="${NAME##*/}"
+VERSION=$(date '+%Y-%m-%d')
+
+brew list "crate-$NAME" >/dev/null 2>&1 && \
+    brew unlink "crate-$NAME"
+
+ROOT="$(brew --prefix)/Cellar/crate-$NAME/$VERSION"
+
+cargo install "$@" --root "$ROOT" --bins --color always
+
+brew link "$NAME"

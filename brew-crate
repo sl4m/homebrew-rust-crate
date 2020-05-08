@@ -16,4 +16,4 @@ ROOT="$(brew --prefix)/Cellar/crate-$NAME/$VERSION"
 
 cargo install "$@" --root "$ROOT" --bins --color always
 
-brew link "$NAME"
+brew link "crate-$NAME"

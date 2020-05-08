@@ -18,7 +18,7 @@ $ brew crate exa
   Installing /usr/local/Cellar/crate-exa/2020-05-08/bin/exa
    Installed package `exa v0.9.0` (executable `exa`)
 
-$ brew uninstall crate-rand
+$ brew uninstall crate-exa
 ```
 
 ## Why?

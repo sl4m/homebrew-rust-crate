@@ -14,6 +14,6 @@ brew list "crate-$NAME" >/dev/null 2>&1 && \
 
 ROOT="$(brew --prefix)/Cellar/crate-$NAME/$VERSION"
 
-cargo install "$@" --root "$ROOT" --bins --color always
+cargo install "$@" --root "$ROOT" --locked --bins --color always
 
 brew link "crate-$NAME"

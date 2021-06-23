@@ -8,6 +8,8 @@ A brew command to install Rust crates.
 $ brew install sl4m/rust-crate/brew-crate
 ```
 
+Note: Users that don't have Rust installed, pass in the flag `--with-rust` as part of the command above
+
 ## Usage
 
 ```

@@ -5,7 +5,7 @@ class BrewCrate < Formula
   sha256 "b154b38aa33b157563954b2d42ad468d52ebc311cae66f35fb825ed8373803ba"
   head "https://github.com/sl4m/homebrew-rust-crate.git"
 
-  depends_on "rust"
+  depends_on "rust" => "optional"
 
   def install
     bin.install "brew-crate"
